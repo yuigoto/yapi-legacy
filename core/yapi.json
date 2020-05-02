@@ -1,0 +1,23 @@
+{
+    "name":"YAPI",
+    "version":"0.0.1",
+    "copyright":"©2017 Fabio Yuiti Goto",
+    "client":{
+        "name":"SIXSIDED Developments",
+        "url":"http://yapi.sx",
+        "api_url":"http://yapi.sx"
+    },
+    "headers":{
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "origin, authorization, x-requested-with, content-type",
+        "Access-Control-Allow-Methods": "PUT, GET, POST, DELETE, OPTIONS",
+        "Content-Type": "application/json"
+    },
+    "database":{
+        "type":"sqlite",
+        "path":"yapi.yapi",
+        "name":"",
+        "user":"",
+        "password":""
+    }
+}

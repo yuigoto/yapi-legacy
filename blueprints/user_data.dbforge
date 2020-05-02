@@ -1,0 +1,95 @@
+{
+    "name":"user_data",
+    "description":"Dados de usuários do sistema",
+    "columns":[
+        {
+            "name":"id",
+            "type":"VARCHAR",
+            "constraint":64,
+            "null":false,
+            "unique":true,
+            "meta":{
+                "label":"ID do usuário",
+                "description":"Chave primária, identificador único do usuário, é um UUID/GUID",
+                "placeholder":"00000000-0000-0000-0000-000000000000",
+                "required":true,
+                "is_primary":true,
+                "user_input":false
+            }
+        },
+        {
+            "name":"username",
+            "type":"VARCHAR",
+            "constraint":128,
+            "null":false,
+            "unique":true,
+            "meta":{
+                "label":"Username *",
+                "description":"Nome de usuário/login do usuário no sistema, apenas letras minúsculas, números e underscore",
+                "placeholder":"usuario, usuario-teste, usuario01",
+                "required":true,
+                "is_primary":false,
+                "user_input":true
+            }
+        },
+        {
+            "name":"usermail",
+            "type":"VARCHAR",
+            "constraint":255,
+            "null":false,
+            "unique":true,
+            "meta":{
+                "label":"E-mail *",
+                "description":"Endereço de e-mail do usuário, pode ser utilizado como forma alternativa de login",
+                "placeholder":"mail@mail.com.br",
+                "required":true,
+                "is_primary":false,
+                "user_input":true
+            }
+        },
+        {
+            "name":"password",
+            "type":"VARCHAR",
+            "constraint":128,
+            "null":false,
+            "meta":{
+                "label":"Senha *",
+                "description":"Senha do usuário no sistema",
+                "placeholder":"**********",
+                "required":true,
+                "is_primary":false,
+                "user_input":true
+            }
+        },
+        {
+            "name":"created_at",
+            "type":"INT",
+            "constraint":10,
+            "unsigned":true,
+            "null":false,
+            "meta":{
+                "label":"Data de Criação",
+                "description":"Data de criação da conta de usuário, deve ser uma timestamp",
+                "placeholder":"1234567890",
+                "required":true,
+                "is_primary":false,
+                "user_input":false
+            }
+        },
+        {
+            "name":"updated_at",
+            "type":"INT",
+            "constraint":10,
+            "unsigned":true,
+            "null":false,
+            "meta":{
+                "label":"Data de Atualização",
+                "description":"Data de atualização dos dados do usuário no banco de dados, deve ser uma timestamp",
+                "placeholder":"1234567890",
+                "required":true,
+                "is_primary":false,
+                "user_input":false
+            }
+        }
+    ]
+}
